@@ -10,6 +10,6 @@ YouTube(url).streams.first().download()
 input_filename = YouTube(url).streams.first().default_filename
 output_filename = input_filename + '.mp3'
 
-# ffmpeg -i "Lil Pump - Gucci Gang.mp4" -vn -ar 44100 -ac 2 -ab 192k -f mp3 "Lil Pump - Gucci Gang.mp3"
+
 command = 'ffmpeg -i ' + '\"' + input_filename + '\"' + ' -ab 160k -ac 2 -ar 44100 -vn ' + '\"' + output_filename + '\"'
 subprocess.call(command, shell=True)
